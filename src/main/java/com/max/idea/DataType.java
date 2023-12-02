@@ -1,7 +1,5 @@
 package com.max.idea;
 
-import java.sql.SQLOutput;
-
 public class DataType {
     public static void main(String[] args) {
         double price = 1399.99;
