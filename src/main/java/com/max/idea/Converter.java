@@ -44,7 +44,7 @@ public class Converter {
         else {
             System.out.println("Пожалуйста, перезапустите программу и введите 1 или 2");
         }
-        if (physicalQuantity == 1) {
+        if (physicalQuantity == 1 && (massType == 1 | massType == 2 | massType == 3 | massType == 4)) {
             switch(massType) {
                 case 1:
                     massArray[0] = massNumber;
@@ -74,7 +74,7 @@ public class Converter {
             for (int i = 0; i < 4; i++) {
                 System.out.println(massArraytext[i] + ": " + massArray[i]);
             }
-        } else if (physicalQuantity == 2) {
+        } else if (physicalQuantity == 2 && (distanceType == 1 | distanceType == 2 | distanceType == 3 | distanceType == 4)) {
             switch (distanceType) {
                 case 1:
                     distanceArray[0] = distanceNumber;
