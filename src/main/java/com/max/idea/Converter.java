@@ -7,8 +7,7 @@ public class Converter {
         System.out.println("Этот конвертер физических величин позволяет переводить ряд единиц измерения массы и расстояния");
         System.out.println("*********");
         Scanner input = new Scanner(System.in);
-        double[] massArray = new double[4];
-        double[] distanceArray = new double[4];
+        double[] Array = new double[4];
         String[] massArraytext = {"граммы", "килограммы", "унции", "пуды"};
         String[] distanceArraytext = {"метры", "километры", "мили", "ярды"};
         int massType = 0;
@@ -47,62 +46,62 @@ public class Converter {
         if (physicalQuantity == 1 && (massType == 1 | massType == 2 | massType == 3 | massType == 4)) {
             switch(massType) {
                 case 1:
-                    massArray[0] = massNumber;
-                    massArray[1] = massNumber / 1000;
-                    massArray[2] = massNumber / 28.35;
-                    massArray[3] = massNumber / 16380;
+                    Array[0] = massNumber;
+                    Array[1] = massNumber / 1000;
+                    Array[2] = massNumber / 28.35;
+                    Array[3] = massNumber / 16380;
                     break;
                 case 2:
-                    massArray[0] = massNumber * 1000;
-                    massArray[1] = massNumber;
-                    massArray[2] = massNumber * 35.274;
-                    massArray[3] = massNumber / 16.381;
+                    Array[0] = massNumber * 1000;
+                    Array[1] = massNumber;
+                    Array[2] = massNumber * 35.274;
+                    Array[3] = massNumber / 16.381;
                     break;
                 case 3:
-                    massArray[0] = massNumber * 28.35;
-                    massArray[1] = massNumber / 35.274;
-                    massArray[2] = massNumber;
-                    massArray[3] = massNumber / 577.8;
+                    Array[0] = massNumber * 28.35;
+                    Array[1] = massNumber / 35.274;
+                    Array[2] = massNumber;
+                    Array[3] = massNumber / 577.8;
                     break;
                 case 4:
-                    massArray[0] = massNumber * 16380;
-                    massArray[1] = massNumber * 16.381;
-                    massArray[2] = massNumber * 577.8;
-                    massArray[3] = massNumber;
+                    Array[0] = massNumber * 16380;
+                    Array[1] = massNumber * 16.381;
+                    Array[2] = massNumber * 577.8;
+                    Array[3] = massNumber;
                     break;
             }
             for (int i = 0; i < 4; i++) {
-                System.out.println(massArraytext[i] + ": " + massArray[i]);
+                System.out.println(massArraytext[i] + ": " + Array[i]);
             }
         } else if (physicalQuantity == 2 && (distanceType == 1 | distanceType == 2 | distanceType == 3 | distanceType == 4)) {
             switch (distanceType) {
                 case 1:
-                    distanceArray[0] = distanceNumber;
-                    distanceArray[1] = distanceNumber / 1000;
-                    distanceArray[2] = distanceNumber / 1609;
-                    distanceArray[3] = distanceNumber * 1.094;
+                    Array[0] = distanceNumber;
+                    Array[1] = distanceNumber / 1000;
+                    Array[2] = distanceNumber / 1609;
+                    Array[3] = distanceNumber * 1.094;
                     break;
                 case 2:
-                    distanceArray[0] = distanceNumber * 1000;
-                    distanceArray[1] = distanceNumber;
-                    distanceArray[2] = distanceNumber / 1.609;
-                    distanceArray[3] = distanceNumber * 1094;
+                    Array[0] = distanceNumber * 1000;
+                    Array[1] = distanceNumber;
+                    Array[2] = distanceNumber / 1.609;
+                    Array[3] = distanceNumber * 1094;
                     break;
                 case 3:
-                    distanceArray[0] = distanceNumber * 1609;
-                    distanceArray[1] = distanceNumber * 1.609;
-                    distanceArray[2] = distanceNumber;
-                    distanceArray[3] = distanceNumber * 1760;
+                    Array[0] = distanceNumber * 1609;
+                    Array[1] = distanceNumber * 1.609;
+                    Array[2] = distanceNumber;
+                    Array[3] = distanceNumber * 1760;
                     break;
                 case 4:
-                    distanceArray[0] = distanceNumber / 1.094;
-                    distanceArray[1] = distanceNumber / 1094;
-                    distanceArray[2] = distanceNumber / 1760;
-                    distanceArray[3] = distanceNumber;
+                    Array[0] = distanceNumber / 1.094;
+                    Array[1] = distanceNumber / 1094;
+                    Array[2] = distanceNumber / 1760;
+                    Array[3] = distanceNumber;
                     break;
             }
             for (int i = 0; i < 4; i++) {
-                System.out.println(distanceArraytext[i] + ": " + distanceArray[i]);
+                System.out.println(distanceArraytext[i] + ": " + Array[i]);
             }
         }
 
