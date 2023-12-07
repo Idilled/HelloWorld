@@ -4,9 +4,9 @@ import java.util.Scanner;
 
 public class CheckConstant {
     public static void main(String[] args) {
-        double x = 1.1;
-        double y = 6;
-        double z = 14;
+        final double X = 1.1;
+        final double Y = 6;
+        final double Z = 14;
         int arrayLength;
         Scanner input = new Scanner(System.in);
 
@@ -17,7 +17,7 @@ public class CheckConstant {
         System.out.println("Введите элементы массива, их должно быть " + arrayLength);
         for (int i = 0; i < arrayLength; i++) {
             array[i] = input.nextDouble();
-            if (array[i] == x || array[i] == y || array[i] == z) {
+            if (array[i] == X || array[i] == Y || array[i] == Z) {
                 System.out.println("Данное значение имеется в константах");
             }
         }
