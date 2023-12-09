@@ -21,7 +21,7 @@ public class ArrayModification {
         for (int i = 0; i < arrayLength; i++) {
             sum += array[i];
         }
-        arithMean = sum / (arrayLength);
+        arithMean = sum / arrayLength;
 
         System.out.println("Массив, где каждый элемент умножается на среднее арифметическое");
         for (int i = 0; i < arrayLength; i++) {
