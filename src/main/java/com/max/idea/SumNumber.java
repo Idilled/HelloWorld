@@ -6,7 +6,7 @@ public class SumNumber {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         int n;
-        int sum = 0;
+        long sum = 0;
 
         System.out.println("Введите любое целое положительное число");
         n = input.nextInt();
