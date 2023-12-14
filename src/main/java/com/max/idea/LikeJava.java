@@ -6,7 +6,7 @@ public class LikeJava {
         Scanner input = new Scanner(System.in);
         String result;
 
-        System.out.println("Введите код: "); //Код: I like Java!!!
+        System.out.println("Введите код: "); //Код: I like Java!!!, но, согласно имеющимся проверкам, между like и Java, Java и !!! можно вставлять символы
         result = input.nextLine();
         boolean check1 = result.contains("Java");
         boolean check2 = result.startsWith("I like");
