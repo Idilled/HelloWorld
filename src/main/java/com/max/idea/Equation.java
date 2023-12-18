@@ -16,39 +16,43 @@ public class Equation {
 
         if ((equationString.charAt(1) == '+') && equationString.charAt(3) == '=') {
             if (Character.isDigit(equationString.charAt(0)) & Character.isDigit(equationString.charAt(2)) & (equationString.charAt(4) == 'x' | (equationString.charAt(4) == 'х'))) {
-                a = equationString.charAt(0);
-                b = equationString.charAt(2);
+                a = Character.getNumericValue(equationString.charAt(0));
+                b = Character.getNumericValue(equationString.charAt(2));
                 x = a + b;
                 System.out.println("x = " + x);
             } else if (Character.isDigit(equationString.charAt(0)) & Character.isDigit(equationString.charAt(4)) & (equationString.charAt(2) == 'x' | (equationString.charAt(2) == 'х'))) {
-                a = equationString.charAt(0);
-                b = equationString.charAt(4);
+                a = Character.getNumericValue(equationString.charAt(0));
+                b = Character.getNumericValue(equationString.charAt(4));
                 x = b - a;
                 System.out.println("x = " + x);
             } else if (Character.isDigit(equationString.charAt(2)) & Character.isDigit(equationString.charAt(4)) & (equationString.charAt(0) == 'x' | (equationString.charAt(0) == 'х'))) {
-                a = equationString.charAt(2);
-                b = equationString.charAt(4);
+                a = Character.getNumericValue(equationString.charAt(2));
+                b = Character.getNumericValue(equationString.charAt(4));
                 x = b - a;
                 System.out.println("x = " + x);
+            } else {
+                System.out.println("Введенное уравнение не соответствует схеме. Перезапустите программу и введите уравнение, соответствующее схеме");
             }
         } else if ((equationString.charAt(1) == '-') && equationString.charAt(3) == '=') {
             if (Character.isDigit(equationString.charAt(0)) & Character.isDigit(equationString.charAt(2)) & (equationString.charAt(4) == 'x' | (equationString.charAt(4) == 'х'))) {
-                a = equationString.charAt(0);
-                b = equationString.charAt(2);
+                a = Character.getNumericValue(equationString.charAt(0));
+                b = Character.getNumericValue(equationString.charAt(2));
                 x = a - b;
                 System.out.println("x = " + x);
             } else if (Character.isDigit(equationString.charAt(0)) & Character.isDigit(equationString.charAt(4)) & (equationString.charAt(2) == 'x' | (equationString.charAt(2) == 'х'))) {
-                a = equationString.charAt(0);
-                b = equationString.charAt(4);
+                a = Character.getNumericValue(equationString.charAt(0));
+                b = Character.getNumericValue(equationString.charAt(4));
                 x = a - b;
                 System.out.println("x = " + x);
             } else if (Character.isDigit(equationString.charAt(2)) & Character.isDigit(equationString.charAt(4)) & (equationString.charAt(0) == 'x' | (equationString.charAt(0) == 'х'))) {
-                a = equationString.charAt(2);
-                b = equationString.charAt(4);
+                a = Character.getNumericValue(equationString.charAt(2));
+                b = Character.getNumericValue(equationString.charAt(4));
                 x = a + b;
                 System.out.println("x = " + x);
+            } else {
+                System.out.println("Введенное уравнение не соответствует схеме. Перезапустите программу и введите уравнение, соответствующее схеме");
             }
-        }  else {
+        } else {
             System.out.println("Введенное уравнение не соответствует схеме. Перезапустите программу и введите уравнение, соответствующее схеме");
         }
 
