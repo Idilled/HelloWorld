@@ -14,7 +14,7 @@ public class WordsNumber {
         String[] strArray = str.split(" ");
 
         for (int i = 0; i < strArray.length; i++) {
-                boolean result = strArray[i].matches("^[\\p{InBasicLatin}]+$"); // ИЛИ regex: "^[\u0000-\u007F]+$"
+            boolean result = strArray[i].matches("[A-Za-z]+");
                 if (result == true) {
                     System.out.println(strArray[i]);
                     count++;
