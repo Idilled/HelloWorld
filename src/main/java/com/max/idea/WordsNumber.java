@@ -23,3 +23,4 @@ public class WordsNumber {
         System.out.println("Отобрано " + count + " слов(a), которые содержат только латиницу");
         }
 }
+
