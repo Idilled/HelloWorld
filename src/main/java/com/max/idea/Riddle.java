@@ -11,21 +11,27 @@ public class Riddle {
         System.out.println("Напишите ответ на загадку: Сидит дед, во сто шуб одет, кто его раздевает, тот слёзы проливает");
         System.out.println("У вас есть три попытки. При первой попытке доступна подсказка, чобы ее получить, введите \"Подсказка\"");
         boolean useHint = false;
-        for (int i = 1; i <4; i++) {
+        int i;
+        for (i = 1; i <4; i++) {
             System.out.println("Попытка № " + i);
             answer = input.nextLine();
             if (i == 1 & answer.equalsIgnoreCase("Подсказка")) {
                 Random r = new Random();
                 System.out.println(hint[r.nextInt(3)]);
                 useHint = true;
+                i--;
             } else if (i != 1 & answer.equalsIgnoreCase("Подсказка")) {
                 System.out.println("Подсказка уже недоступна");
+                i--;
             } else if (answer.equalsIgnoreCase("Заархивированный вирус")) {
                 System.out.println("Правильно!");
                 break;
-            } else if ((i == 1 | i == 2) & (!answer.equals("Заархивированный вирус") | !answer.equals("Подсказка")) & !useHint) {
+            } else if (answer.equals("")) {
+                System.out.println("Упс! Вы ничего не ввели. Великодушно предлагаем повторить попытку");
+                i--;
+            } else if ((i == 1 | i == 2) & (!answer.equals("Заархивированный вирус") | !answer.equals("Подсказка") | !answer.equals("")) & !useHint) {
                 System.out.println("Подумай ещё!");
-            } else if (i == 2 & useHint) {
+            } else if (i == 1 & useHint) {
                 System.out.println("Обидно, приходи в другой раз");
                 break;
             } else if ((i == 3) & (!answer.equals("Заархивированный вирус"))) {
