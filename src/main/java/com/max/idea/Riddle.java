@@ -21,7 +21,7 @@ public class Riddle {
                 Random r = new Random();
                 System.out.println(hint[r.nextInt(hint.length)]);
                 i--;
-            } else if (i == 1 & useHint & (answer.equalsIgnoreCase("Подсказка") | !answer.equals(result))) {
+            } else if (i == 1 & useHint & (answer.equalsIgnoreCase("Подсказка") | !answer.equalsIgnoreCase(result))) {
                 System.out.println("Обидно, приходи в другой раз");
                 break;
             } else if (i != 1 & answer.equalsIgnoreCase("Подсказка")) {
@@ -33,9 +33,9 @@ public class Riddle {
             } else if (answer.equals("")) {
                 System.out.println("Упс! Вы ничего не ввели. Великодушно предлагаем повторить попытку");
                 i--;
-            } else if ((i == 1 | i == 2) & (!answer.equals(result) | !answer.equals("Подсказка") | !answer.equals("")) & !useHint) {
+            } else if ((i == 1 | i == 2) & (!answer.equalsIgnoreCase(result) | !answer.equalsIgnoreCase("Подсказка") | !answer.equals("")) & !useHint) {
                 System.out.println("Подумай ещё!");
-            } else if ((i == 3) & (!answer.equals(result))) {
+            } else if ((i == 3) & (!answer.equalsIgnoreCase(result))) {
                 System.out.println("Обидно, приходи в другой раз");
                 break;
             }
